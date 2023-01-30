@@ -1,0 +1,41 @@
+﻿<Window x:Class="ProyectoAmigos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoAmigos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBox x:Name="txNombre" Text="" />
+            <TextBox x:Name="txApellidos" Text="" />
+            <Button x:Name="btnAnadir" Content="Añadir" Click="btnAnadir_Click"/>
+            <Label x:Name="lblbinding" Content="Nombre introducido:"/>
+            <TextBox x:Name="txtbinding1" TextWrapping="Wrap" Text="{Binding ElementName=txNombre,Path=Text}" Width="120"/>
+            <Button x:Name="BotonActualiza" Content="Actualiza nombre" Click="BotonActualiza_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Label x:Name="lbNombre" Content="Nombre:" />
+            <Label x:Name="lbApellidos" Content="Apellidos:"/>
+        </StackPanel>
+        <ListBox x:Name="lstPersonas" Grid.Row="1"/>
+        <Button x:Name="BotonQuitarAmigo" Grid.Column="1" Content="&lt;" HorizontalAlignment="Center" Margin="0,72,0,0" Grid.Row="1" VerticalAlignment="Top" Width="39"/>
+        <Button x:Name="BotonmejorAmigo" Grid.Column="1" Content="&gt;" HorizontalAlignment="Center" Margin="0,48,0,0" Grid.Row="1" VerticalAlignment="Top" Click="BotonmejorAmigo_Click" Height="19" Width="39"/>
+
+        <ListBox x:Name="lstmejoresAmigos" Grid.Column="2" Grid.Row="1"  SelectionMode="Extended"/>
+
+        <DataGrid x:Name="dgAlumnos" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,144,0,0" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,6 @@
+C:\Users\DAM2Alu10\source\repos\ComboBoxEjemplo\obj\Debug\net6.0-windows\ComboBoxEjemplo.csproj.AssemblyReference.cache
+C:\Users\DAM2Alu10\source\repos\ComboBoxEjemplo\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\DAM2Alu10\source\repos\ComboBoxEjemplo\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\DAM2Alu10\source\repos\ComboBoxEjemplo\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\DAM2Alu10\source\repos\ComboBoxEjemplo\obj\Debug\net6.0-windows\ComboBoxEjemplo_MarkupCompile.cache
+C:\Users\DAM2Alu10\source\repos\ComboBoxEjemplo\obj\Debug\net6.0-windows\ComboBoxEjemplo_MarkupCompile.lref

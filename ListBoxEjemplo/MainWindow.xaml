@@ -1,0 +1,30 @@
+﻿<Window x:Class="ListBoxEjemplo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBoxEjemplo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="439" Width="715">
+    <Grid Height="434" VerticalAlignment="Bottom">
+        <GroupBox Header="Elige un color" Margin="10,20,10,327">
+            <StackPanel Height="73" Margin="2,0,99,0">
+
+                <RadioButton Name="rb1" Checked="WriteText2">Yes</RadioButton>
+                <RadioButton Name="rb2" Checked="WriteText2">No</RadioButton>
+                <RadioButton Name="rb3" Checked="WriteText2">No opinion</RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+
+        <StackPanel Margin="10,148,10,10">
+            <TextBox x:Name="txtb" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            <ListBox Name="lib" Height="213" Margin="10,8,10,0" Width="240" SelectionMode="Extended" />
+            <Button Content="Mostrar" Click="Button_Click" Height="25"/>
+
+
+        </StackPanel>
+        <Button x:Name="btnborrar" Content="Button" HorizontalAlignment="Left" Margin="118,349,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+    </Grid>
+</Window>

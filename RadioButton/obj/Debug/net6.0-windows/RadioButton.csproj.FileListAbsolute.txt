@@ -1,0 +1,5 @@
+C:\Users\DAM2Alu10\source\repos\RadioButton\obj\Debug\net6.0-windows\RadioButton.csproj.AssemblyReference.cache
+C:\Users\DAM2Alu10\source\repos\RadioButton\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\DAM2Alu10\source\repos\RadioButton\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\DAM2Alu10\source\repos\RadioButton\obj\Debug\net6.0-windows\RadioButton_MarkupCompile.cache
+C:\Users\DAM2Alu10\source\repos\RadioButton\obj\Debug\net6.0-windows\RadioButton_MarkupCompile.lref

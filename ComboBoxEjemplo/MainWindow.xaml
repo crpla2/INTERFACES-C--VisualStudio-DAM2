@@ -1,0 +1,25 @@
+﻿<Window x:Class="ComboBoxEjemplo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComboBoxEjemplo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel  Grid.Column="0"
+             Grid.Row="6">
+            <StackPanel.Resources>
+                <local:VacationSpots x:Key="myVacations"/>
+            </StackPanel.Resources>
+            <ComboBox Name="comboBox1"
+            ItemsSource="{StaticResource myVacations}"
+            Text="My Cities"
+            IsEditable="true"
+            IsReadOnly="true"/>
+
+            <TextBlock Text="{Binding ElementName=comboBox1, Path=SelectedItem}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
