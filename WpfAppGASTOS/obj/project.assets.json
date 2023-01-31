@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DAM2Alu10\\source\\repos\\WpfAppGASTOS\\WpfAppGASTOS.csproj",
+      "projectUniqueName": "C:\\Users\\DAM2Alu10\\Source\\Repos\\INTERFACES_VISUALSTUDIO\\WpfAppGASTOS\\WpfAppGASTOS.csproj",
       "projectName": "WpfAppGASTOS",
-      "projectPath": "C:\\Users\\DAM2Alu10\\source\\repos\\WpfAppGASTOS\\WpfAppGASTOS.csproj",
+      "projectPath": "C:\\Users\\DAM2Alu10\\Source\\Repos\\INTERFACES_VISUALSTUDIO\\WpfAppGASTOS\\WpfAppGASTOS.csproj",
       "packagesPath": "C:\\Users\\DAM2Alu10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DAM2Alu10\\source\\repos\\WpfAppGASTOS\\obj\\",
+      "outputPath": "C:\\Users\\DAM2Alu10\\Source\\Repos\\INTERFACES_VISUALSTUDIO\\WpfAppGASTOS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

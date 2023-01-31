@@ -1,0 +1,14 @@
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.csproj.AssemblyReference.cache
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\ExpenseItHome.baml
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\ExpenseReportPage.baml
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\ExpenseItHome.g.cs
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\ExpenseReportPage.g.cs
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS_MarkupCompile.cache
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.g.resources
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.AssemblyInfoInputs.cache
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.AssemblyInfo.cs
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.csproj.CoreCompileInputs.cache
