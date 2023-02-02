@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfAppGASTOS
+namespace ExpenseIt
 {
     /// <summary>
-    /// Lógica de interacción para ExpenseReportPage.xaml
+    /// Interaction logic for ExpenseReportPage.xaml
     /// </summary>
     public partial class ExpenseReportPage : Page
     {
         public ExpenseReportPage()
         {
             InitializeComponent();
+        }
+
+        // Custom constructor to pass expense report data
+        public ExpenseReportPage(object data) : this()
+        {
+            // Bind to expense report data.
+            this.DataContext = data;
         }
     }
 }

@@ -12,3 +12,14 @@ C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\n
 C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.AssemblyInfoInputs.cache
 C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.AssemblyInfo.cs
 C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.csproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\bin\Debug\net6.0-windows\WpfAppGASTOS.exe
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\bin\Debug\net6.0-windows\WpfAppGASTOS.deps.json
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\bin\Debug\net6.0-windows\WpfAppGASTOS.runtimeconfig.json
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\bin\Debug\net6.0-windows\WpfAppGASTOS.dll
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\bin\Debug\net6.0-windows\WpfAppGASTOS.pdb
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.dll
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\refint\WpfAppGASTOS.dll
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.pdb
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\WpfAppGASTOS.genruntimeconfig.cache
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\ref\WpfAppGASTOS.dll
+C:\Users\DAM2Alu10\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppGASTOS\obj\Debug\net6.0-windows\App.baml
