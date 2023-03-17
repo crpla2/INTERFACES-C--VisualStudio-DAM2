@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfAppFitipaldi.NuevoParteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppFitipaldi"
+        mc:Ignorable="d"
+        Title="Nuevo Parte" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Vehículo:" />
+        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="vehiculoComboBox" DisplayMemberPath="Matricula" SelectedItem="{Binding Vehiculo}" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Reparación:" />
+        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="reparacionComboBox" DisplayMemberPath="Descripcion" SelectedItem="{Binding Reparacion}" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Fecha de entrada:" />
+        <DatePicker Grid.Row="2" Grid.Column="1" x:Name="fechaEntradaDatePicker" SelectedDate="{Binding FechaEntrada}" />
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Horas estimadas:" />
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <Button Content="-" Width="25" Margin="5" Click="DisminuirHorasEstimadas_Click"/>
+            <TextBox x:Name="horasEstimadasTextBox" Width="50" Text="{Binding HorasEstimadas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Content="+" Width="25" Margin="5" Click="AumentarHorasEstimadas_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+            <Button x:Name="guardarButton" Content="Guardar" Click="GuardarButton_Click" Margin="0,0,10,0" />
+            <Button x:Name="cancelarButton" Content="Cancelar" Click="CancelarButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

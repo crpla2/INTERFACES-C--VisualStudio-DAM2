@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MatchingGame
@@ -28,10 +23,7 @@ namespace MatchingGame
         // in the Webdings font,
         // and each icon appears twice in this list
         List<string> icons = new List<string>()
-    {
-        "!", "!", "N", "N", ",", ",", "k", "k",
-        "b", "b", "v", "v", "w", "w", "z", "z"
-    };
+    {"a","a","c","c","d","d","e","e","f","f","!","!","N","N",",",",","k","k","b","b","v","v","w","w","z","z","m","m","h","h","y","y","A","A","C","C","D","D","E","E","F","F","?","?","n","n","Y","Y", "K", "K","B", "B", "V", "V", "W", "W", "Z", "Z","M","M","H","H","x","x"};
         public Form1()
         {
             InitializeComponent();
@@ -165,7 +157,7 @@ namespace MatchingGame
             // If the loop didn’t return, it didn't find
             // any unmatched icons
             // That means the user won. Show a message and close the form
-            MessageBox.Show("¡Encontraste todos los iconos!", "Enhorabuena");
+            MessageBox.Show("¡Enhorabuena Carlos!\n¡Encontraste todos los iconos!", "Ganaste");
             Close();
         }
     }

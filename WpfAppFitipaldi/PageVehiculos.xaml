@@ -1,0 +1,42 @@
+﻿<Page x:Class="WpfAppFitipaldi.PageVehiculos"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppFitipaldi"
+      xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageVehiculos">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <controls:DataGrid x:Name="vehiculosDataGrid" Grid.Row="0" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="False">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn Header="Marca" Binding="{Binding Marca}" Width="*" />
+                <controls:DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" Width="*" />
+                <controls:DataGridTextColumn Header="Matricula" Binding="{Binding Matricula}" Width="*" />
+                <controls:DataGridTextColumn Header="Propietario" Binding="{Binding Propietario.NombreCompleto}" Width="*" IsReadOnly="True" />
+
+                <controls:DataGridTemplateColumn Header="Acciones">
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="borrarButton" Content="Borrar" Margin="5" Click="borrarButton_Click" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="nuevoButton" Content="Nuevo" Margin="10" Click="nuevoButton_Click" />
+        </StackPanel>
+    </Grid>
+</Page>
+
