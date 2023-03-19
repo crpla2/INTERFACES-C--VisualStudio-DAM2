@@ -27,6 +27,16 @@ namespace WpfAppFitipaldi.Entity
             this.horasEstimadas = horasEstimadas;
             this.horasReales = horasReales;
         }
+        public Parte(Vehiculo vehiculo, Reparacion reparacion, DateTime fechaEntrada,  int horasEstimadas)
+        {
+            this.vehiculo = vehiculo;
+            this.cliente = vehiculo.Propietario.NombreCompleto;
+            this.reparacion = reparacion;
+            this.fechaEntrada = fechaEntrada;
+           
+            this.horasEstimadas = horasEstimadas;
+           
+        }
 
         public Vehiculo Vehiculo
         {

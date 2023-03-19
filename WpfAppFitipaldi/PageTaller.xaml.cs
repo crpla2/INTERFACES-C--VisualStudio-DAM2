@@ -18,74 +18,71 @@ namespace WpfAppFitipaldi
 {
     public partial class PageTaller : Page
     {
-        private List<Parte> partes { get; }
-        private List<Vehiculo> vehiculos = PageVehiculos.vehiculos;
+       
+        private static List<Vehiculo> vehiculos = PageVehiculos.vehiculos;
         public static List<Reparacion> reparaciones { get; } = new List<Reparacion>()
         {
-            new Reparacion ("Cambio de aceite", 50),
-            new  Reparacion ("Cambio de neumáticos", 200)
+            new Reparacion("Cambio de aceite", 50),
+            new Reparacion("Cambio de neumáticos", 200)
         };
-       
+
+        private List<Parte> partes { get; } = new List<Parte>()
+            {
+                new Parte(vehiculos[0], reparaciones[0], new DateTime(2022, 2, 1), new DateTime(2022, 2, 3), 2, 3),
+                new Parte(vehiculos[1], reparaciones[1], new DateTime(2022, 2, 10), new DateTime(2022, 2, 14), 4, 4),
+               
+            }; 
         public PageTaller()
         {
             InitializeComponent();
 
-            partes = new List<Parte>()
-            {
-                new Parte(vehiculos[0], reparaciones[0],new DateTime(2022, 1, 1), new DateTime(2022, 1, 3), 8, 10),
-                new Parte(vehiculos[1], reparaciones[1],new DateTime(2022, 1, 1), new DateTime(2022, 1, 3), 8, 10),
-                new Parte(vehiculos[2], reparaciones[0],new DateTime(2022, 1, 1), new DateTime(2022, 1, 3), 8, 10)
-            };
-
+            partesDataGrid.CanUserAddRows = false;
             partesDataGrid.ItemsSource = partes;
         }
 
-       
         private void NuevoParteButton_Click(object sender, RoutedEventArgs e)
         {
-            // Abrir la ventana de nuevo parte
+            // Crear una nueva instancia de NuevoParteWindow y mostrarla
             NuevoParteWindow nuevoParteWindow = new NuevoParteWindow();
-            nuevoParteWindow.Closing += NuevoParteWindow_Closing; // Suscribir al evento Closing
+            nuevoParteWindow.Closed += NuevoParteWindow_Closed; // suscribirse al evento Closed
             nuevoParteWindow.ShowDialog();
         }
 
-        private void NuevoParteWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void NuevoParteWindow_Closed(object sender, EventArgs e)
         {
-            NuevoParteWindow nuevoParteWindow = sender as NuevoParteWindow;
-            if (nuevoParteWindow.DialogResult != true) // Comprobar si el usuario ha añadido un nuevo parte
+            // Agregar el nuevo Parte a la lista de partes y actualizar el DataGrid
+            NuevoParteWindow nuevoParteWindow = (NuevoParteWindow)sender;
+            if (nuevoParteWindow.DialogResult == true)
             {
-                e.Cancel = true; // Cancelar el cierre de la ventana
+                partes.Add(nuevoParteWindow.parteCreado);
+                partesDataGrid.Items.Refresh();
             }
         }
+
 
         private void BorrarParteButton_Click(object sender, RoutedEventArgs e)
         {
-            if (partesDataGrid.SelectedItem != null)
-            {
-                partes.Remove((Parte)partesDataGrid.SelectedItem);
-                partesDataGrid.Items.Refresh();
-            }
-        }
-
-        private void AumentarHorasReales_Click(object sender, RoutedEventArgs e)
-        {
-            if (partesDataGrid.SelectedItem != null)
-            {
-                Parte parte = (Parte)partesDataGrid.SelectedItem;
-                parte.HorasReales++;
-                partesDataGrid.Items.Refresh();
-            }
+            // Obtener el parte seleccionado en el DataGrid
+            Parte parte = partesDataGrid.SelectedItem as Parte;
+            // Eliminar el parte seleccionado de la lista y actualizar el origen de datos del DataGrid
+            partes.Remove(parte);
+            partesDataGrid.Items.Refresh();
         }
 
         private void DisminuirHorasReales_Click(object sender, RoutedEventArgs e)
         {
-            if (partesDataGrid.SelectedItem != null)
-            {
-                Parte parte = (Parte)partesDataGrid.SelectedItem;
-                parte.HorasReales = parte.HorasReales > 0 ? parte.HorasReales - 1 : 0;
-                partesDataGrid.Items.Refresh();
-            }
+            Button button = (Button)sender;
+            Parte parte = (Parte)button.DataContext;
+            parte.HorasReales--;
+            CollectionViewSource.GetDefaultView(partesDataGrid.ItemsSource).Refresh();
+        }
+
+        private void AumentarHorasReales_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Parte parte = (Parte)button.DataContext;
+            parte.HorasReales++;
+            CollectionViewSource.GetDefaultView(partesDataGrid.ItemsSource).Refresh();
         }
     }
 }
-

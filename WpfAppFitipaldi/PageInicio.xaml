@@ -11,16 +11,23 @@
     <Page.Background>
         <ImageBrush ImageSource="/img/fondo.png"/>
     </Page.Background>
-    
-    <Grid Margin="0,33,0,0">
-        
-       
 
-        <!-- Logo con un z-index superior para que aparezca encima de la imagen de fondo
-        <Image Source="/img/logo.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-100,0,0" Panel.ZIndex="1" Width="200" Height="100"/>
- -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        <Label Content="Esta es la página de Clientes"/>
-        <!-- Aquí puedes agregar más controles y elementos para mostrar información de los clientes -->
+        <TextBlock Text="Nombre de usuario:" Margin="5"/>
+        <TextBox x:Name="UsernameTextBox" Margin="5" Grid.Row="1"/>
+
+        <TextBlock Text="Contraseña:" Margin="5" Grid.Row="2"/>
+        <PasswordBox x:Name="PasswordBox" Margin="5" Grid.Row="3"/>
+
+        <Button Content="Iniciar sesión" Margin="5" Grid.Row="4" Click="LoginButton_Click"/>
+        <Button Content="Cerrar sesión" Click="CerrarSesionButton_Click"/>
     </Grid>
 </Page>

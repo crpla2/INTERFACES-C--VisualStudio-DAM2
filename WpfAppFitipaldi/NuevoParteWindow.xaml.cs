@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,61 +18,72 @@ namespace WpfAppFitipaldi
 {
     public partial class NuevoParteWindow : Window
     {
-        public Parte Parte { get; set; }
+        public Parte parteCreado { get; set; }
 
         public NuevoParteWindow()
         {
             InitializeComponent();
-
-           
 
             // Cargar datos en los ComboBox
             vehiculoComboBox.ItemsSource = PageVehiculos.vehiculos;
             reparacionComboBox.ItemsSource = PageTaller.reparaciones;
 
             // Crear una nueva instancia de Parte
-            Parte = new Parte();
+            parteCreado = new Parte();
+            parteCreado.FechaEntrada = DateTime.Today;
+           
 
             // Establecer el DataContext del formulario a la instancia de Parte creada
-            DataContext = Parte;
+            DataContext = parteCreado;
         }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Validar que se haya seleccionado un vehículo y una reparación
-            if (vehiculoComboBox.SelectedItem == null || reparacionComboBox.SelectedItem == null)
+        {          
+
+            if (IsValid())
             {
-                MessageBox.Show("Debe seleccionar un vehículo y una reparación.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                parteCreado = new Parte((Vehiculo)vehiculoComboBox.SelectedItem, (Reparacion)reparacionComboBox.SelectedItem, fechaEntradaDatePicker.SelectedDate.Value, int.Parse(horasEstimadasTextBox.Text));
+                parteCreado.FechaSalida = parteCreado.FechaEntrada;
+                parteCreado.HorasReales = parteCreado.HorasEstimadas; 
+                this.DialogResult = true; // establecer DialogResult en true para indicar que se creó un nuevo parte
+                this.Close(); // cerrar el formulario
+            }
+        }
+
+        private bool IsValid()
+        {
+            // Verificar que se haya seleccionado un vehículo
+            if (vehiculoComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un vehículo.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
 
-            // Validar que se haya ingresado un valor válido para las horas estimadas
+            // Verificar que se haya seleccionado una reparación
+            if (reparacionComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar una reparación.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            // Verificar que la fecha de entrada no sea posterior a la fecha de salida
+            if (fechaEntradaDatePicker.SelectedDate >= DateTime.Now)
+            {
+                MessageBox.Show("La fecha de entrada no puede ser posterior a la fecha de salida.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            // Verificar que las horas estimadas sean un número positivo
             if (!int.TryParse(horasEstimadasTextBox.Text, out int horasEstimadas) || horasEstimadas <= 0)
             {
-                MessageBox.Show("Debe ingresar un valor válido para las horas estimadas.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                MessageBox.Show("Las horas estimadas deben ser un número positivo.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
-            
-            // Establecer los valores de la instancia de Parte con los valores ingresados por el usuario
-            Parte.Vehiculo = (Vehiculo)vehiculoComboBox.SelectedItem;
-            Parte.Reparacion = (Reparacion)reparacionComboBox.SelectedItem;
-            // Obtener la fecha actual
-            DateTime currentDate = DateTime.Now;
 
-            // Establecer la fecha por defecto en el DatePicker
-            fechaEntradaDatePicker.SetValue(DatePicker.SelectedDateProperty, currentDate);
-
-            // Escuchar el evento SelectedDateChanged del DatePicker
-            fechaEntradaDatePicker.SelectedDateChanged += (sender, e) => {
-                // Actualizar la fecha de la instancia de Parte cada vez que el usuario cambie la fecha
-                Parte.FechaEntrada = fechaEntradaDatePicker.SelectedDate.Value;
-            };
-            Parte.HorasEstimadas = horasEstimadas;
-
-            // Cerrar el formulario indicando que se guardó la información
-            DialogResult = true;
+            // Todos los campos son válidos
+            return true;
         }
-      
+
 
 
         private void CancelarButton_Click(object sender, RoutedEventArgs e)
@@ -84,13 +96,13 @@ namespace WpfAppFitipaldi
         private void AumentarHorasEstimadas_Click(object sender, RoutedEventArgs e)
         {
             // Obtener el valor actual de horas estimadas
-            int horasEstimadas = (int)Parte.HorasEstimadas;
+            int horasEstimadas = (int)parteCreado.HorasEstimadas;
 
             // Aumentar el valor en una unidad
             horasEstimadas++;
 
             // Asignar el nuevo valor al objeto DataContext
-            Parte.HorasEstimadas = horasEstimadas;
+            parteCreado.HorasEstimadas = horasEstimadas;
 
             // Actualizar la vista
             horasEstimadasTextBox.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
@@ -99,13 +111,13 @@ namespace WpfAppFitipaldi
         private void DisminuirHorasEstimadas_Click(object sender, RoutedEventArgs e)
         {
             // Obtener el valor actual de horas estimadas
-            int horasEstimadas = (int)Parte.HorasEstimadas;
+            int horasEstimadas = (int)parteCreado.HorasEstimadas;
 
             // Disminuir el valor en una unidad, asegurándose de que nunca sea menor que cero
             horasEstimadas = Math.Max(0, horasEstimadas - 1);
 
             // Asignar el nuevo valor al objeto DataContext
-            Parte.HorasEstimadas = horasEstimadas;
+            parteCreado.HorasEstimadas = horasEstimadas;
 
             // Actualizar la vista
             horasEstimadasTextBox.GetBindingExpression(TextBox.TextProperty).UpdateTarget();

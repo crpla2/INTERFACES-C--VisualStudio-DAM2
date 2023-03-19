@@ -15,24 +15,24 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <controls:DataGrid x:Name="vehiculosDataGrid" Grid.Row="0" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="False">
-            <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Marca" Binding="{Binding Marca}" Width="*" />
-                <controls:DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" Width="*" />
-                <controls:DataGridTextColumn Header="Matricula" Binding="{Binding Matricula}" Width="*" />
-                <controls:DataGridTextColumn Header="Propietario" Binding="{Binding Propietario.NombreCompleto}" Width="*" IsReadOnly="True" />
+        <DataGrid x:Name="vehiculosDataGrid" Grid.Row="0" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Marca" Binding="{Binding Marca}" Width="*" />
+                <DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" Width="*" />
+                <DataGridTextColumn Header="Matricula" Binding="{Binding Matricula}" Width="*" />
+                <DataGridTextColumn Header="Propietario" Binding="{Binding Propietario.NombreCompleto}" Width="*" IsReadOnly="True" />
 
-                <controls:DataGridTemplateColumn Header="Acciones">
-                    <controls:DataGridTemplateColumn.CellTemplate>
+                <DataGridTemplateColumn Header="Acciones">
+                    <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <Button x:Name="borrarButton" Content="Borrar" Margin="5" Click="borrarButton_Click" />
                             </StackPanel>
                         </DataTemplate>
-                    </controls:DataGridTemplateColumn.CellTemplate>
-                </controls:DataGridTemplateColumn>
-            </controls:DataGrid.Columns>
-        </controls:DataGrid>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button x:Name="nuevoButton" Content="Nuevo" Margin="10" Click="nuevoButton_Click" />

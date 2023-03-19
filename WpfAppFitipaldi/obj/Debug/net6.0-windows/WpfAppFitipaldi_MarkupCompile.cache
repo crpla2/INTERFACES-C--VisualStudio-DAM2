@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\DAM2Alu10\source\repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\obj\Debug\net6.0-windows\
+C:\Users\carlo\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\obj\Debug\net6.0-windows\
 WpfAppFitipaldi
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\DAM2Alu10\source\repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\App.xaml
+C:\Users\carlo\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\App.xaml
 71107846892
 
 13-443398354
-213-2035767569
+2132104030280
 MainWindow.xaml;NuevoParteWindow.xaml;NuevoVehiculoWindow.xaml;PageClientes.xaml;PageInicio.xaml;PageTaller.xaml;PageVehiculos.xaml;
 
 False

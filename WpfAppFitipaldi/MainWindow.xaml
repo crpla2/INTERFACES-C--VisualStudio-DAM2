@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfAppFitipaldi"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -21,17 +21,20 @@
         </StackPanel>
 
         <!-- Contenido principal -->
-        <TabControl Grid.Row="1">
+        <TabControl Grid.Row="1" x:Name="MainTabControl">
+            <!-- Pestaña de inicio de sesión -->
             <TabItem Header="Inicio">
                 <Frame Source="PageInicio.xaml"/>
             </TabItem>
-            <TabItem Header="Clientes">
+
+            <!-- Pestañas de clientes, vehículos y taller, solo accesibles si se ha iniciado sesión -->
+            <TabItem Header="Clientes" IsEnabled="{Binding IsLoggedIn}">
                 <Frame Source="PageClientes.xaml"/>
             </TabItem>
-            <TabItem Header="Vehículos">
+            <TabItem Header="Vehículos" IsEnabled="{Binding IsLoggedIn}">
                 <Frame Source="PageVehiculos.xaml"/>
             </TabItem>
-            <TabItem Header="Taller">
+            <TabItem Header="Taller" IsEnabled="{Binding IsLoggedIn}">
                 <Frame Source="PageTaller.xaml"/>
             </TabItem>
         </TabControl>
@@ -41,5 +44,6 @@
             <TextBlock Margin="10" Text="Derechos reservados"/>
         </StackPanel>
     </Grid>
-     
+
 </Window>
+

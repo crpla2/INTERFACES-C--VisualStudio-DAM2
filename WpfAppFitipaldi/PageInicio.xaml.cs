@@ -15,14 +15,45 @@ using System.Windows.Shapes;
 
 namespace WpfAppFitipaldi
 {
-    /// <summary>
-    /// Lógica de interacción para Page1.xaml
-    /// </summary>
     public partial class PageInicio : Page
     {
+        private string nombreUsuario = "a";
+        private string contrasena = "a";
+
         public PageInicio()
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string nombreUsuarioIngresado = UsernameTextBox.Text;
+            string contrasenaIngresada = PasswordBox.Password;
+
+            if (nombreUsuarioIngresado == nombreUsuario && contrasenaIngresada == contrasena)
+            {
+                MessageBox.Show("Inicio de sesión exitoso");
+
+                // Obtener la ventana principal y establecer IsLoggedIn como verdadero
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.IsLoggedIn = true;
+
+                // Navegar a la pestaña de clientes
+                mainWindow.MainTabControl.SelectedIndex = 1;
+            }
+            else
+            {
+                MessageBox.Show("Nombre de usuario o contraseña incorrectos");
+            }
+        }
+        private void CerrarSesionButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Establecer IsLoggedIn como falso en la ventana principal
+            ((MainWindow)Application.Current.MainWindow).IsLoggedIn = false;
+
+            // Mostrar la pestaña de inicio en la ventana principal
+            ((MainWindow)Application.Current.MainWindow).MainTabControl.SelectedIndex = 0;
+        }
+
     }
 }
