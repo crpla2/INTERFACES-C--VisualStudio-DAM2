@@ -32,7 +32,7 @@ namespace WpfAppFitipaldi
 
             if (nombreUsuarioIngresado == nombreUsuario && contrasenaIngresada == contrasena)
             {
-                MessageBox.Show("Inicio de sesión exitoso");
+                MessageBox.Show("Inicio de sesión exitoso", "Inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 // Obtener la ventana principal y establecer IsLoggedIn como verdadero
                 MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
@@ -43,7 +43,7 @@ namespace WpfAppFitipaldi
             }
             else
             {
-                MessageBox.Show("Nombre de usuario o contraseña incorrectos");
+                MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void CerrarSesionButton_Click(object sender, RoutedEventArgs e)

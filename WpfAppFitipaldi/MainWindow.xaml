@@ -16,8 +16,8 @@
 
         <!-- Encabezado -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Background="LightGray">
-            <Image Source="/logo.png" Width="50" Height="50"/>
-            <TextBlock Margin="10" Text="Mi Aplicación"/>
+            <Image Source="/img/logo.png" Width="100" Height="80"/>
+            <TextBlock Margin="10" Text="Talleres Fitipaldi" FontWeight="Bold" FontSize="50" FontFamily="Consolas"/>
         </StackPanel>
 
         <!-- Contenido principal -->

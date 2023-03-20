@@ -8,7 +8,19 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageVehiculos">
-
+    <Page.Background>
+        <ImageBrush ImageSource="/img/fondo.jpg"/>
+    </Page.Background>
+    <Page.Resources>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -35,7 +47,7 @@
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="nuevoButton" Content="Nuevo" Margin="10" Click="nuevoButton_Click" />
+            <Button x:Name="nuevoButton" Content="Nuevo Vehiculo" Click="nuevoButton_Click" Margin="10,0,10,0" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
         </StackPanel>
     </Grid>
 </Page>

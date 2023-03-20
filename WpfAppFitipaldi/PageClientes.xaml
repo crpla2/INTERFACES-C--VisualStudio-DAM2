@@ -6,38 +6,48 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
-
+    <Page.Background>
+        <ImageBrush ImageSource="/img/fondo.jpg"/>
+    </Page.Background>
     <Grid>
-        <ComboBox x:Name="clientesComboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" DisplayMemberPath="Nombre" SelectionChanged="clientesComboBox_SelectionChanged"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Clientes" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="10,0,0,0"/>
 
-        <StackPanel x:Name="formularioClientes" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="400">
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Nombre:" Width="100"/>
+
+        <StackPanel x:Name="formularioClientes" Grid.Row="1" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="400" Background="White">
+            <StackPanel Orientation="Horizontal" Margin="120,0,0,8">
+                <ComboBox x:Name="clientesComboBox"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" DisplayMemberPath="Nombre" SelectionChanged="clientesComboBox_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,8">
+                <TextBlock Text="Nombre:" Width="100" FontWeight="Bold"/>
                 <TextBox x:Name="nombreTextBox" TextWrapping="Wrap" Text="{Binding SelectedItem.Nombre, ElementName=clientesComboBox, Mode=TwoWay}" Width="200"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Apellidos:" Width="100"/>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,8">
+                <TextBlock Text="Apellidos:" Width="100" FontWeight="Bold"/>
                 <TextBox x:Name="apellidosTextBox" TextWrapping="Wrap" Text="{Binding SelectedItem.Apellidos, ElementName=clientesComboBox, Mode=TwoWay}" Width="200"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Dirección:" Width="100"/>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,8">
+                <TextBlock Text="Dirección:" Width="100" FontWeight="Bold"/>
                 <TextBox x:Name="direccionTextBox" TextWrapping="Wrap" Text="{Binding SelectedItem.Direccion, ElementName=clientesComboBox, Mode=TwoWay}" Width="200"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Teléfono:" Width="100"/>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,8">
+                <TextBlock Text="Teléfono:" Width="100" FontWeight="Bold"/>
                 <TextBox x:Name="telefonoTextBox" TextWrapping="Wrap" Text="{Binding SelectedItem.Telefono, ElementName=clientesComboBox, Mode=TwoWay}" Width="200"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="DNI:" Width="100"/>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,5">
+                <TextBlock Text="DNI:" Width="100" FontWeight="Bold"/>
                 <TextBox x:Name="dniTextBox" TextWrapping="Wrap" Text="{Binding SelectedItem.Dni, ElementName=clientesComboBox, Mode=TwoWay}" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="insertarButton" Content="Insertar" Margin="0,10,10,0" Width="100" Click="insertarButton_Click"/>
-                <Button x:Name="actualizarButton" Content="Actualizar" Margin="0,10,10,0" Width="100" Click="actualizarButton_Click"/>
-                <Button x:Name="borrarButton" Content="Borrar" Margin="0,10,10,0" Width="100" Click="borrarButton_Click"/>
+                <Button x:Name="insertarButton" Content="Insertar" Margin="40,8,10,0" Width="100" Click="insertarButton_Click"/>
+                <Button x:Name="actualizarButton" Content="Actualizar" Margin="0,8,10,0" Width="100" Click="actualizarButton_Click"/>
+                <Button x:Name="borrarButton" Content="Borrar" Margin="0,8,10,0" Width="100" Click="borrarButton_Click"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" Width="400">
-                <Button x:Name="limpiarButton" Content="Limpiar Datos" Margin="0,10,10,0" Width="100" Click="limpiarButton_Click"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="400">
+                <Button x:Name="limpiarButton" Content="Limpiar Datos" Margin="150,8,10,5" Width="100" Click="limpiarButton_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

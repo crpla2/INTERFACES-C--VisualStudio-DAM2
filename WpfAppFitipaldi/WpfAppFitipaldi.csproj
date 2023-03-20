@@ -8,12 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="img\fondo.png" />
+    <None Remove="img\fondo.jpg" />
+    <None Remove="img\logo.png" />
     <None Remove="logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="img\fondo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,7 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="logo.png" />
+    <Resource Include="img\fondo.jpg" />
+    <Resource Include="img\logo.png" />
   </ItemGroup>
 
 </Project>
