@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PDye4RNl6c9giJ48w5TcZXzshtvUWxJJ2vj8+iGmtY9ozef3ck6qUPYjoAf2kT9yhGCtj8XLZRCmHI70aEGXlA==",
+  "dgSpecHash": "xAVs/SpiXvpjV3xUjbDOt+FqKa2weA0Uegs0eRVvGdFe2liyV+eDXLqBo/ZDA7wThWOTrjxY7rCnEJYvX5L8YQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\DAM2Alu10\\source\\repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\WpfAppFitipaldi.csproj",
   "expectedPackageFiles": [
@@ -131,7 +131,8 @@
     "C:\\Users\\DAM2Alu10\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\DAM2Alu10\\.nuget\\packages\\system.xml.xmldocument\\4.0.1\\system.xml.xmldocument.4.0.1.nupkg.sha512",
     "C:\\Users\\DAM2Alu10\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\DAM2Alu10\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
+    "C:\\Users\\DAM2Alu10\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512",
+    "C:\\Users\\DAM2Alu10\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": [
     {

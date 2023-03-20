@@ -126,3 +126,4 @@ C:\Users\carlo\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\obj\Debug\ne
 C:\Users\carlo\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\obj\Debug\net6.0-windows\WpfAppFitipaldi.pdb
 C:\Users\carlo\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\obj\Debug\net6.0-windows\WpfAppFitipaldi.genruntimeconfig.cache
 C:\Users\carlo\Source\Repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\obj\Debug\net6.0-windows\ref\WpfAppFitipaldi.dll
+C:\Users\DAM2Alu10\source\repos\INTERFACES_VISUALSTUDIO\WpfAppFitipaldi\bin\Debug\net6.0-windows\WpfAnimatedGif.dll

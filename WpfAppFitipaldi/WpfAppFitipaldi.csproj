@@ -8,10 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\alonso.gif" />
+    <None Remove="img\boxes.gif" />
+    <None Remove="img\contento.gif" />
     <None Remove="img\Emersonderecha.png" />
     <None Remove="img\EmersonIzquierda.png" />
+    <None Remove="img\f1.gif" />
     <None Remove="img\fondo.jpg" />
     <None Remove="img\logo.png" />
+    <None Remove="img\putin.gif" />
+    <None Remove="img\reparacion.gif" />
     <None Remove="logo.png" />
   </ItemGroup>
 
@@ -19,13 +25,20 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\alonso.gif" />
+    <Resource Include="img\boxes.gif" />
+    <Resource Include="img\contento.gif" />
     <Resource Include="img\Emersonderecha.png" />
     <Resource Include="img\EmersonIzquierda.png" />
+    <Resource Include="img\f1.gif" />
     <Resource Include="img\fondo.jpg" />
     <Resource Include="img\logo.png" />
+    <Resource Include="img\putin.gif" />
+    <Resource Include="img\reparacion.gif" />
   </ItemGroup>
 
 </Project>

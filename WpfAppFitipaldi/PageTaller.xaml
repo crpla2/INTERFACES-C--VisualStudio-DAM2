@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:gif="http://wpfanimatedgif.codeplex.com"
       xmlns:local="clr-namespace:WpfAppFitipaldi"
       xmlns:entity="clr-namespace:WpfAppFitipaldi.Entity"
       mc:Ignorable="d" 
@@ -22,7 +23,7 @@
         </Style>
     </Page.Resources>
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -70,7 +71,8 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <Button Margin="10,10,0,10" x:Name="nuevoParteButton" Content="Nuevo Parte" Click="NuevoParteButton_Click" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
-            <Label Margin="355,0,10,10" Width="318"  FontWeight="Bold" Foreground="DarkBlue">*Los datos se actualizan directamente desde la tabla</Label>
+            <Image  gif:ImageBehavior.AnimatedSource="/img/boxes.gif" Width="145" Height="44"/>
+            <Label Margin="205,0,10,10" Width="318"  FontWeight="Bold" Foreground="DarkBlue">*Los datos se actualizan directamente desde la tabla</Label>
         </StackPanel>
     </Grid>
 </Page>

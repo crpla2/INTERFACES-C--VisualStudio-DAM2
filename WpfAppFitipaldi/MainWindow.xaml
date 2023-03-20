@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:WpfAppFitipaldi"
         mc:Ignorable="d"
         Title="Talleres Fitipaldi" Height="450" Width="800">
@@ -18,6 +19,7 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" Background="LightGray">
             <Image Source="/img/logo.png" Width="100" Height="80"/>
             <TextBlock Margin="10" Text="Talleres Fitipaldi" FontWeight="Bold" FontSize="50" FontFamily="Consolas"/>
+            <Image  gif:ImageBehavior.AnimatedSource="/img/reparacion.gif" Width="175" Height="67"/>
         </StackPanel>
 
         <!-- Contenido principal -->
