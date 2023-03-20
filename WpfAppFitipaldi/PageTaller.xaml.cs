@@ -73,7 +73,15 @@ namespace WpfAppFitipaldi
         {
             Button button = (Button)sender;
             Parte parte = (Parte)button.DataContext;
-            parte.HorasReales--;
+            if (parte.HorasReales <= 0)
+            {
+                MessageBox.Show("Las horas estimadas deben ser un número positivo.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                parte.HorasReales--;
+            }
+           
             CollectionViewSource.GetDefaultView(partesDataGrid.ItemsSource).Refresh();
         }
 

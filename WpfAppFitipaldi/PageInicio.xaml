@@ -11,48 +11,63 @@
     <Page.Background>
         <ImageBrush ImageSource="/img/fondo.jpg"/>
     </Page.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" >
-        <StackPanel.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="FontWeight" Value="Bold"/>
-                <Setter Property="FontSize" Value="16"/>
-            </Style>
-            <Style TargetType="TextBox">
-                <Setter Property="FontSize" Value="16"/>
-            </Style>
-            <Style TargetType="PasswordBox">
-                <Setter Property="FontSize" Value="16"/>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="FontSize" Value="16"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-            </Style>
-            <Style TargetType="Button" x:Key="GreenButton" BasedOn="{StaticResource {x:Type Button}}">
-                <Setter Property="Background" Value="Green"/>
-            </Style>
-            <Style TargetType="Button" x:Key="RedButton" BasedOn="{StaticResource {x:Type Button}}">
-                <Setter Property="Background" Value="Red"/>
-            </Style>
-        </StackPanel.Resources>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
 
-            <TextBlock Text="Nombre de usuario:" Margin="5" Grid.Row="0"/>
-            <TextBox x:Name="UsernameTextBox" Margin="5" Grid.Row="1"/>
+        </Grid.RowDefinitions>
 
-            <TextBlock Text="Contraseña:" Margin="5" Grid.Row="2"/>
-            <PasswordBox x:Name="PasswordBox" Margin="5" Grid.Row="3"/>
-            <Button Content="Iniciar sesión" Margin="5" Grid.Row="4" Click="LoginButton_Click" Style="{StaticResource GreenButton}"/>
-        </Grid>
+        <TextBlock Text="Login" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="13,2,2,0"/>
+        <TextBlock Text="Login" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="5,0,0,0" Foreground="DarkKhaki"/>
 
-        <Button Content="Cerrar sesión" Click="CerrarSesionButton_Click" Style="{StaticResource RedButton}"/>
-    </StackPanel>
+
+        <StackPanel   Margin="5,10,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" >
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+                <Style TargetType="PasswordBox">
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+                <Style TargetType="Button" x:Key="GreenButton" BasedOn="{StaticResource {x:Type Button}}">
+                    <Setter Property="Background" Value="Green"/>
+                </Style>
+                <Style TargetType="Button" x:Key="RedButton" BasedOn="{StaticResource {x:Type Button}}">
+                    <Setter Property="Background" Value="Red"/>
+                </Style>
+            </StackPanel.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Nombre de usuario:" Margin="5" Grid.Row="0"/>
+                <TextBox x:Name="UsernameTextBox" Margin="5" Grid.Row="1"/>
+
+                <TextBlock Text="Contraseña:" Margin="5" Grid.Row="2"/>
+                <PasswordBox x:Name="PasswordBox" Margin="5" Grid.Row="3"/>
+                <Button Content="Iniciar sesión" Margin="5" Grid.Row="4" Click="LoginButton_Click" Style="{StaticResource GreenButton}"/>
+            </Grid>
+
+            <Button Content="Cerrar sesión" Click="CerrarSesionButton_Click" Style="{StaticResource RedButton}"/>
+        </StackPanel>
+        <Image HorizontalAlignment="Left" Height="139" Margin="154,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139" Source="/img/EmersonIzquierda.png"/>
+        <Image HorizontalAlignment="Left" Height="139" Margin="487,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139" Source="/img/EmersonDerecha.png" />
+
+    </Grid>
 </Page>
 

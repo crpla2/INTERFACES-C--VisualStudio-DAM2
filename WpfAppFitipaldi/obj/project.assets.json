@@ -7991,19 +7991,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carlo\\.nuget\\packages\\": {}
+    "C:\\Users\\DAM2Alu10\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlo\\Source\\Repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\WpfAppFitipaldi.csproj",
+      "projectUniqueName": "C:\\Users\\DAM2Alu10\\source\\repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\WpfAppFitipaldi.csproj",
       "projectName": "WpfAppFitipaldi",
-      "projectPath": "C:\\Users\\carlo\\Source\\Repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\WpfAppFitipaldi.csproj",
-      "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\Source\\Repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\obj\\",
+      "projectPath": "C:\\Users\\DAM2Alu10\\source\\repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\WpfAppFitipaldi.csproj",
+      "packagesPath": "C:\\Users\\DAM2Alu10\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DAM2Alu10\\source\\repos\\INTERFACES_VISUALSTUDIO\\WpfAppFitipaldi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DAM2Alu10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

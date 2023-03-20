@@ -36,8 +36,8 @@
                 <DataGridTextColumn Header="Vehículo" Binding="{Binding Vehiculo.Matricula}" Width="*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Reparación" Binding="{Binding Reparacion.Descripcion}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Fecha de entrada" Binding="{Binding FechaEntrada, StringFormat=dd/MM/yyyy}" Width="*" IsReadOnly="True"/>
-                <DataGridTemplateColumn Header="Fecha de salida" Width="*">
+                <DataGridTextColumn Header="Fecha  entrada" Binding="{Binding FechaEntrada, StringFormat=dd/MM/yyyy}" Width="*" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="Fecha  salida" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <DatePicker SelectedDate="{Binding FechaSalida, Mode=TwoWay}" />
@@ -68,8 +68,9 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Row="2">
-            <Button x:Name="nuevoParteButton" Content="Nuevo Parte" Click="NuevoParteButton_Click" Margin="10,0,10,0" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button Margin="10,10,0,10" x:Name="nuevoParteButton" Content="Nuevo Parte" Click="NuevoParteButton_Click" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
+            <Label Margin="355,0,10,10" Width="318"  FontWeight="Bold" Foreground="DarkBlue">*Los datos se actualizan directamente desde la tabla</Label>
         </StackPanel>
     </Grid>
 </Page>

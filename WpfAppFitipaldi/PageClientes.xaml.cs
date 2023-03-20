@@ -34,6 +34,15 @@ namespace WpfAppFitipaldi
 
             // Establecer la lista de clientes como origen de datos del ComboBox
             clientesComboBox.ItemsSource = clientes;
+
+            nombreTextBox.IsEnabled = true;
+            apellidosTextBox.IsEnabled = true;
+            direccionTextBox.IsEnabled = true;
+            telefonoTextBox.IsEnabled = true;
+            dniTextBox.IsEnabled = true;
+            insertarButton.IsEnabled = true;
+            actualizarButton.IsEnabled = false;
+            borrarButton.IsEnabled = false;
         }
 
         private void clientesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -68,12 +77,19 @@ namespace WpfAppFitipaldi
             if (IsValid())
             {
                 // Crear un nuevo cliente con los datos del formulario
-                Cliente cliente = new Cliente(nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, telefonoTextBox.Text, dniTextBox.Text);
+                Cliente cliente = new Cliente(nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, telefonoTextBox.Text, dniTextBox.Text.ToUpper());
 
                 // Agregar el nuevo cliente a la lista y actualizar el origen de datos del ComboBox
                 clientes.Add(cliente);
                 clientesComboBox.ItemsSource = null;
                 clientesComboBox.ItemsSource = clientes;
+
+                // Limpiar el formulario
+                nombreTextBox.Text = "";
+                apellidosTextBox.Text = "";
+                direccionTextBox.Text = "";
+                telefonoTextBox.Text = "";
+                dniTextBox.Text = "";
             }
         }
 
@@ -88,7 +104,7 @@ namespace WpfAppFitipaldi
                 cliente.Apellidos = apellidosTextBox.Text;
                 cliente.Direccion = direccionTextBox.Text;
                 cliente.Telefono = telefonoTextBox.Text;
-                cliente.Dni = dniTextBox.Text;
+                cliente.Dni = dniTextBox.Text.ToUpper();
 
                 // Actualizar el origen de datos del ComboBox
                 clientesComboBox.ItemsSource = null;
@@ -111,6 +127,15 @@ namespace WpfAppFitipaldi
             direccionTextBox.Text = "";
             telefonoTextBox.Text = "";
             dniTextBox.Text = "";
+
+            nombreTextBox.IsEnabled = true;
+            apellidosTextBox.IsEnabled = true;
+            direccionTextBox.IsEnabled = true;
+            telefonoTextBox.IsEnabled = true;
+            dniTextBox.IsEnabled = true;
+            insertarButton.IsEnabled = true;
+            actualizarButton.IsEnabled = false;
+            borrarButton.IsEnabled = false;
         }
 
         private void limpiarButton_Click(object sender, RoutedEventArgs e)
@@ -137,14 +162,14 @@ namespace WpfAppFitipaldi
             }
 
             // Comprobar que el teléfono tiene un formato válido
-            if (!System.Text.RegularExpressions.Regex.IsMatch(telefonoTextBox.Text, @"/^[6789]\d{8}$/"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(telefonoTextBox.Text, @"^[6789]\d{8}$"))
             {
                 MessageBox.Show("El número de teléfono no es válido. Debe tener 9 dígitos y empezando por 6,7,8 o 9.", "Error de validación", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
 
             // Comprobar que el DNI tiene un formato válido
-            if (!System.Text.RegularExpressions.Regex.IsMatch(dniTextBox.Text, @"^\d{8}[A-Z]$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(dniTextBox.Text, @"^\d{8}[A-Za-z]$"))
             {
                 MessageBox.Show("El DNI no es válido. Debe tener 8 dígitos seguidos de una letra mayúscula.", "Error de validación", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;

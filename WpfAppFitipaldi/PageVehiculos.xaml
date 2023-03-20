@@ -51,6 +51,7 @@
 
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Button x:Name="nuevoButton" Content="Nuevo Vehiculo" Click="nuevoButton_Click" Margin="10,10,10,10" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
+            <Label Margin="320,0,0,0" Width="312" FontWeight="Bold" Foreground="DarkBlue">*Los datos se actualizan directamente desde la tabla </Label>
         </StackPanel>
     </Grid>
 </Page>

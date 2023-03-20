@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\Emersonderecha.png" />
+    <None Remove="img\EmersonIzquierda.png" />
     <None Remove="img\fondo.jpg" />
     <None Remove="img\logo.png" />
     <None Remove="logo.png" />
@@ -20,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\Emersonderecha.png" />
+    <Resource Include="img\EmersonIzquierda.png" />
     <Resource Include="img\fondo.jpg" />
     <Resource Include="img\logo.png" />
   </ItemGroup>
