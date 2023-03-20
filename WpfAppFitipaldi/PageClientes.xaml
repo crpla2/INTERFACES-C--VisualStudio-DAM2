@@ -9,17 +9,24 @@
     <Page.Background>
         <ImageBrush ImageSource="/img/fondo.jpg"/>
     </Page.Background>
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Clientes" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="10,0,0,0"/>
+        <TextBlock Text="Clientes" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="13,2,2,0"/>
+        <TextBlock Text="Clientes" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="5,0,0,0" Foreground="DarkKhaki"/>
 
 
         <StackPanel x:Name="formularioClientes" Grid.Row="1" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="400" Background="White">
             <StackPanel Orientation="Horizontal" Margin="120,0,0,8">
-                <ComboBox x:Name="clientesComboBox"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" DisplayMemberPath="Nombre" SelectionChanged="clientesComboBox_SelectionChanged"/>
+                <ComboBox x:Name="clientesComboBox"  HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="200" DisplayMemberPath="Nombre" SelectionChanged="clientesComboBox_SelectionChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="30,0,0,8">
                 <TextBlock Text="Nombre:" Width="100" FontWeight="Bold"/>

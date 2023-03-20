@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppFitipaldi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Talleres Fitipaldi" Height="450" Width="800">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -41,7 +41,7 @@
 
         <!-- Pie de página -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" Background="LightGray">
-            <TextBlock Margin="10" Text="Derechos reservados"/>
+            <TextBlock Margin="10" Text="¡Despues de confiarnos su coche, Emmerson no tuvo que volver a  reparar su coche en medio de una carrera!"/>
         </StackPanel>
     </Grid>
 

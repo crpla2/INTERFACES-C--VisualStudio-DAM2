@@ -28,7 +28,8 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Taller de Reparación" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="10,10,10,0" Foreground="DarkKhaki"/>
+        <TextBlock Text="Taller de Reparación" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="13,2,2,0"/>
+        <TextBlock Text="Taller de Reparación" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="5,0,0,0" Foreground="DarkKhaki"/>
 
         <DataGrid x:Name="partesDataGrid" AutoGenerateColumns="False"  Grid.Row="1">
             <DataGrid.Columns>

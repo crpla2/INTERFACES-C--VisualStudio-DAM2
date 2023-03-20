@@ -23,11 +23,14 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <TextBlock Text="Vehículos" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"  Margin="13,2,2,0"/>
+        <TextBlock Text="Vehículos" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="5,0,0,0" Foreground="DarkKhaki"/>
 
-        <DataGrid x:Name="vehiculosDataGrid" Grid.Row="0" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="False">
+        <DataGrid x:Name="vehiculosDataGrid" Grid.Row="1" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Marca" Binding="{Binding Marca}" Width="*" />
                 <DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" Width="*" />
@@ -46,8 +49,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="nuevoButton" Content="Nuevo Vehiculo" Click="nuevoButton_Click" Margin="10,0,10,0" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="nuevoButton" Content="Nuevo Vehiculo" Click="nuevoButton_Click" Margin="10,10,10,10" Background="DarkBlue" Foreground="White" FontSize="16" FontWeight="Bold" Padding="5"/>
         </StackPanel>
     </Grid>
 </Page>
